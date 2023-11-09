@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root {
+    --wp--preset--color--black: #000000;
+    --wp--preset--color--gray: #666666D9;
+    --wp--preset--color--gray--black: #555555;
+    --wp--preset--color--cyan-bluish-gray: #abb8c3;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    --wp--preset--color--luminous-vivid-orange: #ff6900;
+    --wp--preset--color--luminous-vivid-amber: #fcb900;
+    --wp--preset--color--light-green-cyan: #7bdcb5;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--pale-cyan-blue: #8ed1fc;
+    --wp--preset--color--vivid-cyan-blue: #0693e3;
+    --wp--preset--color--vivid-purple: #9b51e0;
+    --wp--preset--color--backGround: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+/* navbar */
+
+.chat {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+}
+
+.boxChat {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxChat::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid #9b51e0;
+    position: absolute;
+
+}
+
+.boxchatAnimation {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #9b51e0;
+    right: 20px;
+    bottom: 100px;
+    animation-name: animationBoxChat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes animationBoxChat {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.boxChat_icon {
+    text-align: center;
+}
+
+.boxChat div i {
+    margin-top: 4px;
+    font-size: 30px;
+    color: #9b51e0;
+
+}
+
+/* navbar */
+
+.navContainer {
+    box-shadow: 0 0 3px 0 var(--wp--preset--color--cyan-bluish-gray);
+    background-color: var(--wp--preset--color--backGround);
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 1s ease;
+}
+
+.navContainer.navReduceHight {
+    padding: 0;
+    height: 80px;
+    transition: all 1s ease;
+}
+
+.nav_search {
+    position: relative;
+    margin: 0 15px 0 10px;
+    height: 35px;
+}
+
+.nav_search .nav_search-box {
+    width: 300px;
+    height: 35px;
+    border-radius: 35px;
+    border: 1px solid var(--wp--preset--color--cyan-bluish-gray);
+    outline: none;
+    font-size: 14px;
+    color: var(--wp--preset--color--black);
+    padding: 0 10px;
+}
+
+.nav_search input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+.nav_search .nav_search-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 50%;
+    transform: translateY(50%);
+    border: none;
+    width: 0;
+    color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+.navbar-collapse {
+    flex-grow: unset;
+}
+
+.nav-item {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wp--preset--color--gray);
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.support {
+    position: relative;
+    margin-right: 16px;
+}
+
+
+.support::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -16px;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 2px;
+    height: 30px;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+    margin: 0 8px;
+}
+
+.shop_icon {
+    font-size: 20px;
+}
+
+
+/* Slide */
+
+.carousel-item:hover {
+    opacity: 0.8;
+    /* Hiệu ứng opacity mờ dần khi hover */
+    transform: scale(1.2);
+    /* Hiệu ứng chuyển đổi khi hover vào ảnh */
+}
+
+/* slide */
+
+.slide {
+    margin-top: 100px;
+}
+
+/* main product */
+.mainProduct {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    background-color: var(--wp--preset--color--backGround);
+}
+
+.mainProduct .product_container {
+    width: 24.99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainProduct .product_container a img {
+    width: 100%;
+}
+
+.mainProduct .product_container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--wp--preset--color--gray--black);
+}
+
+/* new product */
+
+.newProduct {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--wp--preset--color--backGround);
+}
+
+.headingTitle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.headingTitle::before {
+    content: "";
+    display: table;
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 1px;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+.headingTitle::after {
+    content: "";
+    display: table;
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 1px;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+
+.headingTitle i {
+    font-size: 20px;
+}
+
+.headingTitle h2 {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.newProduct_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card_Product {
+    width: 24.99%;
+    min-width: 200px;
+    height: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.card_top a {
+    text-decoration: none;
+    color: var(--wp--preset--color--gray--black);
+}
+
+.card_top a div {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card_top a div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.card_top a div img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+
+}
+
+.card_top a:hover {
+    color: var(--wp--preset--color--gray--black);
+}
+
+.card_top a p {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.card_body,
+.card_bot {
+    text-align: center;
+}
+
+.card_body strike {
+    color: var(--wp--preset--color--gray);
+}
+
+.card_body span {
+    font-weight: 600;
+}
+
+.card_body i {
+    font-size: 12px;
+}
+
+.card_bot p {
+    font-weight: 600;
+    color: var(--wp--preset--color--vivid-green-cyan);
+}
+
+/* Pre Order */
+.preOrder {
+    width: 100%;
+    height: auto;
+    padding: 0 150px;
+    background-color: var(--wp--preset--color--backGround);
+}
+
+.product_bg {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.product_bg-content {
+    width: 49.99%;
+    height: 100%;
+}
+
+.product_bg-content img {
+    width: 100%;
+    height: 100%;
+}
+
+/* feed back */
+.feedback_container {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feedback_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 33.29%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.feedback_content-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--wp--preset--color--gray);
+    text-align: center;
+    line-height: 3;
+}
+
+.feedback_content-icon:hover {
+    transition: all 0.2s ease;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+.feedback_content-icon i {
+    font-size: 20px;
+}
+
+.feedback_content h2 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 2;
+    margin-bottom: 0;
+    color: var(--wp--preset--color--gray--black);
+}
+
+.feedback_content p {
+    color: var(--wp--preset--color--gray);
+}
+
+.feedback_line::before {
+    content: "";
+    display: table;
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 200px;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+.feedback_line::after {
+    content: "";
+    display: table;
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 200px;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+/* footer */
+.backgroundFooter {
+    background-color: var(--wp--preset--color--gray);
+}
+
+.info {
+    width: 100%;
+    height: auto;
+    /*background-color: var(--wp--preset--color--gray);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.brand {
+    width: 280px;
+    height: auto;
+}
+
+.describe {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.describe_content {
+    width: 24.99%;
+}
+
+.describe_content-heading {
+    position: relative;
+    padding: 0 0 10px 0;
+    margin-bottom: 20px;
+}
+
+.describe_content-heading::after {
+    content: "";
+    display: table;
+    width: 40px;
+    height: 3px;
+    background-color: var(--wp--preset--color--cyan-bluish-gray);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.describe_content-heading h2 {
+    font-size: 16px;
+    color: var(--wp--preset--color--white);
+}
+
+.describe_content-body {
+    color: var(--wp--preset--color--white);
+    line-height: 2;
+}
+
+.describe_content-body ul {
+    padding: 0;
+}
+
+.describe_content-body ul li a {
+    text-decoration: none;
+    color: var(--wp--preset--color--white);
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: var(--wp--preset--color--gray--black);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    margin-bottom: 0;
+    color: var(--wp--preset--color--cyan-bluish-gray);
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        background-color: var(--wp--preset--color--gray);
+
+    }
+
+    .navbar-collapse-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        min-width: 400px;
+        height: 100%;
+        background-color: var(--wp--preset--color--backGround);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 10px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .close_navbar-icon {
+        font-size: 30px;
+        color: var(--wp--preset--color--backGround);
+        position: absolute;
+        right: 50px;
+        top: 20px;
+        z-index: 90000;
+    }
+
+    .support::after {
+        display: none;
+    }
+
+    .card_Product {
+        width: 200px;
+    }
+
+
+}

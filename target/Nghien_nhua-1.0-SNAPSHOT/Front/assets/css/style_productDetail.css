@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --wp--preset--color--black: #000000;
+    --wp--preset--color--gray: #666666D9;
+    --wp--preset--color--gray--black: #555555;
+    --wp--preset--color--cyan-bluish-gray: #abb8c3;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    --wp--preset--color--luminous-vivid-orange: #ff6900;
+    --wp--preset--color--luminous-vivid-amber: #fcb900;
+    --wp--preset--color--light-green-cyan: #7bdcb5;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--pale-cyan-blue: #8ed1fc;
+    --wp--preset--color--vivid-cyan-blue: #0693e3;
+    --wp--preset--color--vivid-purple: #9b51e0;
+    --wp--preset--color--backGround: #ffffff;
+}
+
+.modals {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    display: none;
+    transition: all 1s ease;
+}
+
+.modals.open {
+    display: block;
+    transition: all 1s ease;
+}
+
+.filter {
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.filter ul {
+    padding: 0px;
+}
+
+.filter li {
+    list-style-type: none;
+}
+
+.filter li a {
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.filter li a:hover {
+    background-color: #f2f2f2;
+}
+
+.btn_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    padding: 0px 10px;
+    opacity: 0.6;
+    color: #ffffff;
+}
+
+.btn_close:hover {
+    color: #555555;
+}
+
+.header {
+    margin-left: 155px;
+}
+
+.home a {
+    text-decoration: none;
+    color: rgba(102, 102, 102, 0.7);
+    font-weight: 200;
+
+}
+
+.home a:hover {
+    color: black;
+}
+
+.nav_bar {
+    display: none;
+    text-align: center;
+}
+
+.nav_bar a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #777777;
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    padding: 0px;
+}
+
+
+.aside-left {
+    flex-basis: 25%;
+}
+
+.product-list {
+    margin-top: 50px;
+}
+
+.product-list ul {
+    padding: 0px;
+}
+
+.product-list li {
+    list-style-type: none;
+
+}
+
+.product-list li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #f9f9f9;
+}
+.product-list li a .on_place{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #f2f2f2;
+}
+
+.product-list li a:hover {
+    background-color: #f2f2f2;
+}
+
+.new_product_title,
+.new_post_title {
+    line-height: 1px;
+    letter-spacing: 0.5;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(119, 119, 119);
+}
+
+.new_product_title_border,
+.new_post_title_border {
+    height: 3px;
+    width: 100%;
+    max-width: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 10px 0px;
+}
+
+.product_list_widget,
+.post_list_widget {
+    padding: 0px;
+}
+
+
+.product_list_widget li,
+.post_list_widget li {
+    list-style-type: none;
+    position: relative;
+    padding: 10px 0px 5px 75px;
+    min-height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    line-height: 1.33;
+}
+
+.product_list_widget li img,
+.post_list_widget li img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    margin-bottom: 5px;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+
+.product_list_widget li a,
+.post_list_widget li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.product_list_widget li a span,
+.post_list_widget li a span {
+    text-decoration: none;
+    color: #000000;
+    display: inline;
+}
+
+.aside-right {
+    flex-basis: 75%;
+    padding: 0 15px;
+}
+
+.card_Product {
+    width: 250px;
+    height: 400px;
+    padding: 0 10px;
+    overflow: hidden;
+    max-width: 25%;
+    position: relative;
+    float: left;
+
+}
+
+.discount {
+    position: absolute;
+    margin-top: 20px;
+    z-index: 100;
+    background-color: rgb(210, 110, 75);
+    border-radius: 70%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    pointer-events: none;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+.card_top a {
+    text-decoration: none;
+    color: var(--wp--preset--color--gray--black);
+}
+
+.card_top a div {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.card_top a div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.card_top a div img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+
+}
+
+.card_top a:hover {
+    color: var(--wp--preset--color--gray--black);
+}
+
+.card_top a p {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.card_body,
+.card_bot {
+    text-align: center;
+}
+
+.card_body strike {
+    color: var(--wp--preset--color--gray);
+}
+
+.card_body span {
+    font-weight: 600;
+}
+
+.card_body i {
+    font-size: 12px;
+}
+
+.card_bot p {
+    font-weight: 600;
+    color: var(--wp--preset--color--vivid-green-cyan);
+}
+
+@media (max-width: 1200px) {
+    .card_Product {
+        max-width: 33%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .card_Product {
+        max-width: 33%;
+    }
+
+    .header {
+        margin: 0px;
+        text-align: center;
+    }
+
+    .nav_bar {
+        display: block;
+
+    }
+
+    .aside-left {
+        display: none;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .aside-left {
+        display: none;
+    }
+
+    .nav_bar {
+        display: block;
+
+    }
+
+    .card_Product {
+        max-width: 50%;
+    }
+}
